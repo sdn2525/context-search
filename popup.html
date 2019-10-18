@@ -1,8 +1,53 @@
 <!doctype html>
 <html>
   <head>
-  <title>Context Search</title>
-  <body>
+    <title>Context Search</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      .context-search {
+        width: 400px;
+        padding: 10px;
+      }
+
+      .context-search input[type=text] {
+        height: 20px;
+        width: 180px;
+        margin: 5px;
+      }
+
+      .context-search-info {
+        display: block;
+        padding-bottom: 10px;
+      }
+
+      #context-list {
+        list-style: none; 
+      }
+
+      #context-list li i {
+        position: relative;
+        left: 5px;
+        background: url(delete.png) no-repeat 0 5px;
+        padding-left: 10px;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        background-size: 100%;
+      }
+
+    </style>
     <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="context-search">
+      <h2>Context Based Search</h2>
+      <input type="text" id="search-query" placeholder="Keyword">
+      <input type="text" id="add-context" placeholder="Add context">
+    </div>
+    <ul id="context-list">
+    </ul>
   </body>
 </html>
